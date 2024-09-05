@@ -73,6 +73,19 @@ public class GameGrid
         return true;
     }
 
+    public bool IsRowEmpty(int row)
+    {
+        for (int column = 0; column < Columns; column++)
+        {
+            if (GetGridValue(row, column) != 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public int ClearFullRows()
     {
         int rowsCleared = 0;
